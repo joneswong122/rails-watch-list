@@ -3,7 +3,7 @@
 <p><strong>Bookmarks comment</strong></p>
 <ul class="list-group">
   <% @list.bookmarks.each do |review| %>
-    <li class="list-group-item"><%= bookmark.comment %></li>
+    <li class="list-group-item"><%= review.comment %></li>
   <% end %>
 </ul>
 <br>
@@ -11,5 +11,5 @@
 
 
 
-<%= link_to "Create bookmark", list_bookmarks_path(@list), class: "btn btn-primary" %>
+<%= link_to "Create bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %>
 <%= link_to "Back to list", lists_path, class: "btn btn-primary" %>
