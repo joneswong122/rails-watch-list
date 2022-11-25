@@ -1,10 +1,6 @@
 <%#= render "lists/form", list: @list %>
 
-<%= simple_form_for(@list) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.submit "Create", class: "btn btn-primary" %>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholder: 'Drama' %>
+  <%= f.submit class: 'btn btn-flat' %>
 <% end %>
-
-<%= link_to "Back to list", lists_path, class: "btn btn-primary" %>
